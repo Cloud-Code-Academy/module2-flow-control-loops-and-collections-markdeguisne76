@@ -29,7 +29,13 @@ public with sharing class FlowControlLoopsCollections {
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) {
-        return null; // Replace null with the variable you used to store the result
+        String result;
+        if(x > y){
+            result = 'Hello World!';
+        } else {
+            result = null;
+        }
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -42,7 +48,13 @@ public with sharing class FlowControlLoopsCollections {
      * @return true if the person is eligible to vote, false otherwise.
      */
     public static Boolean votingEligibility(Integer age) {
-        return null; // Replace null with the variable you used to store the result
+        Boolean result;
+        if (age >= 18) {
+            result = true;
+        } else {
+            result = false;
+        }
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -55,10 +67,15 @@ public with sharing class FlowControlLoopsCollections {
      * @return The maximum of the two numbers, or null if either number is null.
      */
     public static Integer findMax(Integer num1, Integer num2) {
-        // Initialize largestNum as null
         Integer largestNum = null;
-
-        return null; // Replace null with the variable you used to store the result
+        // Handle null values first
+        if (num1 == null || num2 == null) {
+        largestNum = null;
+        } else {
+            largestNum = Math.max(num1, num2);
+        }
+        // Return the result
+        return largestNum; // Replace null with the variable you used to store the result
     }
 
 
@@ -71,7 +88,17 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Positive", "Negative", or "Zero", or null if the number is null.
      */
     public static String checkNumber(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+        String result;
+        if (a == null) {
+            result = null;
+        } else if (a > 0) {
+            result = 'Positive';
+        } else if (a < 0) {
+            result = 'Negative';
+        } else {
+            result = 'Zero';
+        }
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
